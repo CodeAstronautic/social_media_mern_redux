@@ -27,7 +27,7 @@ const Grid = require('gridfs-stream');
 ///////////// IMAGE STUFF
 router.use(methodOverride('_method'));
 
-const conn = mongoose.createConnection("mongodb+srv://invoiceSystem:7UkeK3JGGRRCFe7o@pm.1tahh.mongodb.net/Mkdemo?retryWrites=true&w=majority");
+const conn = mongoose.createConnection("**");
 // Init gfs
 let gfs;
 conn.once('open', () => {
@@ -128,7 +128,7 @@ router.post('/register', async (req, res) => {
      secure: false,
      auth: {
        user: 'pm.globaliasoft@gmail.com' ,
-       pass: "globaliapooja"
+       pass: "*****"
      } ,
      tls : {
        rejectUnauthorized: false
