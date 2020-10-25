@@ -1,0 +1,369 @@
+$break-medium: 850px;
+$break-small: 414px;
+
+.navbarcontainer {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  top: 0;
+}
+
+.mainnavbar {
+  display: none;
+
+  @media screen and (min-width: $break-medium) {
+    padding-top: 0.3rem;
+    display: flex;
+    background: rgb(39, 140, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(39, 140, 255, 1) 0%,
+      rgba(10, 125, 255, 1) 35%,
+      rgba(10, 125, 255, 1) 48%,
+      rgba(31, 107, 242, 1) 100%
+    );
+    color: white;
+    height: 4.7rem;
+    margin-bottom: 0;
+    box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+    a:hover {
+      color: rgb(196, 196, 255);
+    }
+  }
+}
+
+.mainnavbaritem {
+  margin-top: 0.4rem;
+  padding: 5px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.friendrequestopenbuttontrue {
+  white-space: nowrap;
+  color: #c9c3ff;
+  list-style: none;
+
+  transition: color 0.4s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.friendrequestopenbuttonfalse {
+  white-space: nowrap;
+  list-style: none;
+  &:hover {
+    cursor: pointer;
+    color: #c9c3ff;
+  }
+  @media screen and (max-width: $break-small) {
+    margin-left: 0rem;
+  }
+}
+
+.frobuttontrue {
+  &:hover {
+    color: #c9c3ff;
+  }
+}
+
+.navbarcloudicon {
+  margin: 0 1rem;
+}
+
+.smallnavbarcloudicon {
+  color: white;
+}
+
+.mainnavbarlogout {
+  display: inline-block;
+  margin-left: 20rem;
+  position: absolute;
+  right: 1rem;
+  white-space: nowrap;
+}
+
+.navbarhomelink {
+  white-space: nowrap;
+}
+
+.navbar-currentpagelink {
+  color: #c9c3ff;
+}
+
+///////// MEDIUM
+
+.mediumnavbarcontainer,
+.navbarmedium {
+  display: none;
+  @media screen and (min-width: $break-small) {
+    display: block;
+  }
+  @media screen and (min-width: $break-medium) {
+    display: none;
+  }
+  top: 0;
+}
+
+.mediumnavbarcontainer {
+  background: rgb(39, 140, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(39, 140, 255, 1) 0%,
+    rgba(10, 125, 255, 1) 35%,
+    rgba(10, 125, 255, 1) 48%,
+    rgba(31, 107, 242, 1) 100%
+  );
+  box-shadow: 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  min-width: 52.5rem;
+  padding-top: 1rem;
+  color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; /* Webkit */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10  */
+  -o-user-select: none;
+  user-select: none;
+  max-height: 6rem;
+}
+
+.mediumnavbaropentopcontainer {
+  height: 6rem;
+  z-index: 999;
+  position: relative;
+}
+
+.mediumnavbaropenbottomcontainer {
+  margin-top: -1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 107, 242, 1) 0%,
+    rgb(68, 48, 247) 100%
+  );
+}
+// rgb(105, 64, 255) 94%
+
+.closefullnavbarbutton,
+.openfullnavbarbutton {
+  right: 4rem;
+  top: 1.5rem;
+  float: right;
+  position: absolute;
+  @media screen and (max-width: $break-small) {
+    &:hover {
+      cursor: pointer;
+      color: #0c59b1;
+    }
+  }
+}
+
+.mediumclosefullnavbarbutton,
+.mediumopenfullnavbarbutton {
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+  max-height: 3rem;
+  cursor: pointer;
+
+  @media screen and (max-width: $break-medium) {
+    transform: scale(1.3);
+  }
+}
+
+.mediumnavbarhomelink {
+  margin-right: 0.2rem;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+.mediumnavbarcloudicon {
+  margin-right: 0.7rem;
+}
+
+.mediummainnavbarlogout {
+  margin-left: 3%;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+}
+
+.mediumfriendreqs {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  &:hover {
+    cursor: pointer;
+    color: #0a59b3;
+  }
+  @media screen and (max-width: $break-medium) {
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+.mediumarrow {
+  margin-right: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.mediumnavbarlogin {
+  margin-left: 0.5rem;
+}
+
+.mediummainnavbaritem {
+  padding: 0.5rem;
+  list-style: none;
+}
+
+.mediumsearchbar {
+  margin-top: 0.6rem;
+  margin-left: 4%;
+}
+
+.mediumfrobuttontrue,
+.smallfrobuttontrue {
+  color: rgb(128, 186, 253);
+  &:hover {
+    color: rgba(128, 186, 253, 0.616);
+  }
+}
+
+.smallnavbarcontainer,
+.navbarsmall {
+  display: none;
+  top: 0;
+  @media screen and (max-width: $break-small) {
+    display: inherit;
+  }
+}
+
+.smallnavbarcontainer {
+  background: rgb(35, 126, 230);
+  background: linear-gradient(
+    180deg,
+    rgba(39, 140, 255, 1) 0%,
+    rgba(10, 125, 255, 1) 35%,
+    rgba(10, 125, 255, 1) 48%,
+    rgba(31, 107, 242, 1) 100%
+  );
+  font-size: 2.1rem;
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  min-width: 32.5rem;
+  padding-top: 1rem;
+  color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; /* Webkit */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10  */
+  -o-user-select: none;
+  user-select: none;
+  max-height: 6rem;
+}
+
+.smallnavbaropentopcontainer {
+  max-height: 6rem;
+  z-index: 999;
+  position: relative;
+}
+
+.smallnavbaropenbottomcontainer {
+  margin-top: 0.5rem;
+  height: 21.5rem;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 107, 242, 1) 0%,
+    rgb(68, 48, 247) 100%
+  );
+}
+
+.closefullnavbarbutton,
+.openfullnavbarbutton {
+  right: 4rem;
+  top: 1.5rem;
+  float: right;
+  position: absolute;
+  @media screen and (max-width: $break-small) {
+    &:hover {
+      cursor: pointer;
+      color: #0c59b1;
+    }
+  }
+}
+.smallclosefullnavbarbutton {
+  color: #f2f4f7;
+  position: absolute;
+  right: 2rem;
+  top: 0.2rem;
+  @media screen and (max-width: $break-small) {
+    transform: scale(1.25);
+    &:hover {
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+}
+
+.mediumclosefullnavbarbuttonopentrue i,
+.smallclosefullnavbarbuttonopentrue i {
+  color: #7eb8fa;
+}
+
+.smallopenfullnavbarbutton {
+  top: 1.5rem;
+  right: 1rem;
+  position: absolute;
+  &:hover {
+    color: #7eb8fa;
+    cursor: pointer;
+  }
+  @media screen and (max-width: $break-small) {
+    transform: scale(1.3);
+  }
+}
+
+.smallnavbarhomelink {
+  margin-top: -0.6rem;
+  margin-right: 0.1rem;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+.smallnavbarcloudicon {
+  margin-right: 0.7rem;
+}
+
+.smallmainnavbarlogout {
+  margin-left: 3%;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+}
+
+.smallfriendreqs {
+  margin-top: 0.5rem;
+  &:hover {
+    cursor: pointer;
+    color: #0a59b3;
+  }
+}
+
+.smallarrow {
+  margin-right: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.smallnavbarlogin {
+  margin-left: 0.5rem;
+}
+
+.smallmainnavbaritem {
+  padding: 0.8rem 0.5rem;
+  list-style: none;
+}
+
+.smallsearchbar {
+  margin-top: 0.2rem;
+  margin-left: 2%;
+}

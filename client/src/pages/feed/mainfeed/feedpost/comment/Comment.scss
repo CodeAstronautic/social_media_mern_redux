@@ -1,0 +1,131 @@
+$break-medium: 665px;
+$break-small: 414px;
+
+.feedpostcomment {
+  background: rgba(255, 255, 255, 0.658);
+  margin: 1.4rem;
+  padding: 0.1rem;
+  border-radius: 1rem;
+  position: relative;
+  height: 19rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.404);
+  z-index: 1;
+}
+.feedpostcommentauthorpic {
+  height: 4rem;
+  width: 4rem;
+  border: 0.2rem solid white;
+  border-radius: 999px;
+}
+
+.commentuserresponsearea {
+  margin-top: 3rem;
+}
+
+.commentlikesdislikescounter {
+  position: absolute;
+  bottom: 2.2rem;
+  right: 2rem;
+}
+
+.commenteditbutton {
+  margin-right: 1rem;
+  transition: color 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: rgb(82, 137, 255);
+  }
+  @media screen and (max-width: $break-small) {
+    transform: scale(1.5);
+    margin-right: 1.5rem;
+  }
+}
+
+.commenteditbuttonopen {
+  margin-right: 1rem;
+  color: #0a7dff;
+}
+
+.commentdeletebutton {
+  transition: color 0.2s;
+  color: black;
+  &:hover {
+    cursor: pointer;
+    color: rgb(255, 82, 82);
+  }
+  @media screen and (max-width: $break-small) {
+    transform: scale(1.5);
+  }
+}
+
+.commentdeletebuttonopen {
+  color: rgb(255, 82, 82);
+}
+
+.commentdeletebuttongrayedout {
+  color: rgb(165, 165, 165);
+}
+
+.commenteditbuttongrayedout {
+  margin-right: 1rem;
+  color: rgb(165, 165, 165);
+}
+
+.commentdeleteoptions {
+  position: absolute;
+  top: 3rem;
+  right: -1rem;
+  background: rgb(240, 240, 240);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 1rem 0.8rem 3rem rgba(0, 0, 0, 0.349);
+}
+
+.editcommentcancelbutton,
+.commentdeleteconfirmbutton,
+.commentdeletebuttoncancel {
+  background: rgb(223, 223, 223);
+  width: 8rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  transition: color 0.2s, background-color 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: rgb(255, 82, 82);
+    background: rgb(235, 235, 235);
+  }
+  &:active {
+    background: rgb(119, 119, 119);
+    color: rgb(238, 238, 238);
+  }
+  @media screen and (max-width: $break-small) {
+    width: 9rem;
+    padding: 1rem;
+  }
+}
+
+.commentauthorname {
+  font-size: 1.9rem;
+  margin-top: 0.35rem;
+  margin-left: 0.8rem;
+}
+
+.commentcontent {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  min-height: 6.8rem;
+  max-height: 6.8rem;
+  margin-bottom: -1rem;
+  max-width: 90%;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.commentauthorbuttons {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}

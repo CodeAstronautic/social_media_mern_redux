@@ -1,0 +1,78 @@
+$break-medium: 665px;
+$break-small: 414px;
+
+.registerform {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.registerforminsidecontainer {
+  margin-top: 12rem;
+  padding: 2rem 4rem 0 4rem;
+  min-width: 40rem;
+  max-width: 60rem;
+  border-radius: 1rem;
+  background: rgb(255, 255, 255);
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.212),
+    -0.2rem -0.2rem 0.2rem rgba(255, 255, 255, 0.212);
+  @media screen and (max-width: $break-medium) {
+    padding: 2rem 2rem 0 2rem;
+    min-width: 34rem;
+    max-width: 37rem;
+  }
+  @media screen and (max-width: $break-small) {
+    padding: 2rem 1rem 0 1rem;
+    min-width: 20rem;
+    max-width: 25rem;
+  }
+}
+
+.registerforminput {
+  min-width: 50rem;
+  max-width: 50rem;
+  margin: 1rem auto;
+  display: block;
+  padding: 0.5rem;
+  border-width: 0 0 0.2rem 0;
+  border-color: rgb(78, 78, 78);
+  background: rgba(255, 255, 255, 0);
+  @media screen and (max-width: $break-medium) {
+    min-width: 30rem;
+    max-width: 32rem;
+  }
+  @media screen and (max-width: $break-small) {
+    min-width: 20rem;
+    max-width: 20rem;
+  }
+}
+
+.registerbutton {
+  display: block;
+  margin: 2rem auto;
+  padding: 5px 10px !important;
+  border-radius: 8px;
+  width: 50%;
+  background: rgb(81, 158, 253) !important;
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+  @media screen and (min-width: $break-medium) {
+    &:hover {
+      color: rgb(0, 87, 194) !important;
+      background: rgb(172, 209, 255) !important;
+      transform: translateY(-0.2rem);
+    }
+    &:active {
+      transform: translateY(0rem);
+      background: rgb(238, 238, 238) !important;
+      color: rgb(53, 53, 53) !important;
+    }
+  }
+  @media screen and (max-width: $break-medium) {
+    &:active {
+      background: rgb(160, 202, 253) !important;
+      color: white;
+    }
+  }
+}

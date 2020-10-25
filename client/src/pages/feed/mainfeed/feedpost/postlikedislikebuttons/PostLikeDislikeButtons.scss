@@ -1,0 +1,67 @@
+$break-medium: 665px;
+$break-small: 414px;
+
+.postlikebutton,
+.postdislikebutton,
+.postremovelikebutton,
+.postremovedislikebutton,
+.postlikebuttongrayedout,
+.postdislikebuttongrayedout {
+  margin: 0 0.5rem;
+  max-width: 27rem;
+  padding: 0.8rem 10rem;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+.postlikebutton,
+.postdislikebutton {
+  color: rgb(10, 125, 255);
+  background: rgb(255, 255, 255);
+  transition: color 0.2s, background 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: rgb(235, 237, 243);
+    background: rgb(91, 168, 245);
+  }
+}
+
+.postremovelikebutton,
+.postremovedislikebutton {
+  color: rgb(235, 247, 255);
+  background: rgb(10, 125, 255);
+  transition: color 0.2s, background 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: rgb(220, 221, 224);
+    background: rgba(10, 124, 255, 0.466);
+  }
+}
+
+.postlikedislikebuttonscontainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -0.5rem;
+}
+
+.postlikebuttongrayedout,
+.postdislikebuttongrayedout {
+  color: rgb(160, 160, 160);
+  background: rgba(221, 221, 221, 0.288);
+  margin: 0 0.5rem;
+}
+
+.postlikebutton,
+.postdislikebutton,
+.postremovelikebutton,
+.postremovedislikebutton,
+.postdislikebuttongrayedout,
+.postlikebuttongrayedout {
+  @media screen and (max-width: $break-medium) {
+    padding: 0.8rem 7rem;
+  }
+  @media screen and (max-width: $break-small) {
+    padding: 0.8rem 4.5rem;
+  }
+}

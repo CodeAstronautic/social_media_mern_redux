@@ -1,0 +1,107 @@
+$break-medium: 850px;
+$break-small: 414px;
+
+.friendrequestcontainer {
+  width: 24rem;
+  z-index: 2;
+  position: absolute;
+  margin-top: 1.2rem;
+  margin-left: -0.8rem;
+  background: rgb(10, 125, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(31, 107, 242, 1) 0%,
+    rgba(97, 57, 241, 0.84) 100%
+  );
+  padding: 1rem;
+  border-radius: 0 0 0.3rem 0.3rem;
+  &:hover {
+    cursor: default;
+  }
+  @media screen and (max-width: $break-medium) {
+    margin-top: 3.4rem;
+    background: linear-gradient(
+      180deg,
+      rgb(68, 48, 247) 0%,
+      rgba(31, 107, 242, 1) 100%
+    );
+  }
+  @media screen and (max-width: $break-small) {
+    margin-top: 6.5rem;
+  }
+}
+
+.friendrequestbuttonaccept {
+  margin-left: 2rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  // background: rgba(20, 20, 20, 0.08);
+  &:hover {
+    cursor: pointer;
+    color: rgb(2, 89, 189);
+    background: rgba(255, 255, 255, 0.589);
+  }
+}
+
+.friendrequestbuttonreject {
+  margin-left: 2rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  // background: rgba(20, 20, 20, 0.08);
+  &:hover {
+    cursor: pointer;
+    color: rgb(182, 22, 22);
+    background: rgba(255, 255, 255, 0.589);
+  }
+}
+
+.friendrequest {
+  color: white;
+  background: rgba(255, 255, 255, 0.301);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: 10rem;
+  &:hover {
+    cursor: default;
+  }
+}
+
+.nofriendrequests {
+  font-size: 2.3rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.199);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: 10rem;
+  &:hover {
+    cursor: default;
+  }
+}
+
+.friendrequestprofilepic {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 9990rem;
+  border: 0.12rem solid white;
+
+  &:hover {
+    border-color: rgb(23, 131, 255);
+  }
+}
+
+.friendrequestname {
+  &:hover {
+    color: #0041b9;
+  }
+}
+
+.friendrequestclosebutton {
+  color: rgb(80, 80, 80);
+  right: 0;
+  margin-left: 20rem;
+  transition: color 0.2s;
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
+}

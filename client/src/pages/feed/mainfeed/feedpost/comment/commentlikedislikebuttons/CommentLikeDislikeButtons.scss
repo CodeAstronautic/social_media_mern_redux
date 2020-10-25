@@ -1,0 +1,82 @@
+$break-medium: 665px;
+$break-small: 414px;
+
+.commentlikedislikeinnercontainer {
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0.4rem;
+}
+
+.commentlikebutton,
+.commentdislikebutton {
+  width: 20rem;
+  color: rgb(10, 125, 255);
+  background: rgb(255, 255, 255);
+  padding: 0.3rem 10rem;
+  border-radius: 0.4rem;
+  transition: color 0.2s, background 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: rgb(235, 237, 243);
+    background: rgb(91, 168, 245);
+  }
+}
+
+.commentremovelikebutton,
+.commentremovedislikebutton {
+  width: 20rem;
+  color: rgb(235, 247, 255);
+  background: rgb(10, 125, 255);
+  padding: 0.3rem 10rem;
+  border-radius: 0.4rem;
+  transition: color 0.2s, background 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: rgb(220, 221, 224);
+    background: rgba(10, 124, 255, 0.466);
+  }
+}
+
+.commentdislikebuttongrayedout,
+.commentlikebuttongrayedout {
+  color: rgb(160, 160, 160);
+  background: rgba(221, 221, 221, 0.288);
+  width: 20rem;
+  text-align: center;
+  padding: 0.3rem 10rem;
+  border-radius: 0.4rem;
+}
+
+.commentdislikebutton,
+.commentremovedislikebutton,
+.commentdislikebuttongrayedout {
+  margin-left: 1rem;
+}
+
+.commentdislikebutton i,
+.commentlikebutton i,
+.commentremovelikebutton i,
+.commentremovedislikebutton i,
+.commentdislikebuttongrayedout i,
+.commentlikebuttongrayedout i {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.commentdislikebutton,
+.commentlikebutton,
+.commentremovelikebutton,
+.commentremovedislikebutton,
+.commentdislikebuttongrayedout,
+.commentlikebuttongrayedout {
+  @media screen and (max-width: $break-medium) {
+    padding: 0.3rem 6rem;
+    width: 7rem;
+  }
+  @media screen and (max-width: $break-small) {
+    padding: 0.3rem 5rem;
+    width: 5rem;
+  }
+}

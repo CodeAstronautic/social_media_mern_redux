@@ -1,0 +1,27 @@
+$break-medium: 665px;
+$break-small: 440px;
+
+.mainfeedcontainer {
+  margin: 1rem 0 10rem 0 !important;
+  padding: 6rem 0 10rem 0 !important;
+  min-height: 100%;
+  height: auto;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.mainfeedscrollloading {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.infinite-scroll-component {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  width: 100%;
+  @media screen and (max-width: $break-small) {
+    min-width: 35rem;
+  }
+}

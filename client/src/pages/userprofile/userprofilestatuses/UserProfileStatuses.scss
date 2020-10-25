@@ -1,0 +1,229 @@
+$break-medium: 850px;
+$break-small: 476px;
+
+.userprofilestatusarea {
+  width: 41.5rem;
+  padding-left: 4rem;
+
+  @media screen and (max-width: $break-medium) {
+    width: 80%;
+    margin-bottom: 5rem;
+    min-width: 50rem;
+    margin-top: 6rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.userprofilestatusform {
+  display: flex;
+  @media screen and (min-width: $break-medium) {
+    width: 100%;
+    margin-left: 5rem;
+  }
+  @media screen and (min-width: $break-small) {
+    margin-left: 10rem;
+  }
+}
+
+.userprofilestatusinput {
+  margin-top: 0;
+  margin-bottom: 12.8rem;
+  overflow: auto;
+  height: 7.7rem;
+  width: 100%;
+  resize: none;
+  padding: 0.5rem;
+  padding: 1rem;
+  margin-left: -10rem;
+  @media screen and (max-width: $break-medium) {
+    margin-bottom: 10rem;
+    width: 80%;
+    margin-bottom: 5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 80vw;
+    min-width: 98%;
+  }
+  @media screen and (max-width: $break-small) {
+    font-size: 2rem;
+    max-width: 92vw;
+    min-width: 92vw;
+    margin-left: 45vw;
+  }
+}
+
+.userprofilestatusformsubmit {
+  top: 8.5rem;
+  width: 8rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  right: 3rem;
+  transform: translateX(-50%);
+  position: relative;
+  height: 3rem;
+  background: rgb(10, 125, 255);
+  padding: 0.2rem 1.5rem;
+  transition: background 0.25s, color 0.25s, top 0.25s;
+  color: white;
+  &:hover {
+    cursor: pointer;
+    background: rgb(125, 163, 219);
+    color: rgb(250, 250, 250);
+  }
+  &:active {
+    color: rgb(255, 255, 255);
+    background: rgb(158, 158, 158);
+  }
+  @media screen and (max-width: $break-medium) {
+    right: 120%;
+    transform: translateX(50%);
+    font-size: 1.9rem;
+    padding: 0.2rem 2rem;
+    height: 3.7rem;
+    min-width: 10rem;
+    text-align: center;
+  }
+  @media screen and (max-width: $break-small) {
+    right: 100vw;
+    transform: translateX(0);
+  }
+}
+
+.userprofilestatuses {
+  max-width: 100%;
+  @media screen and (min-width: $break-medium) {
+    margin-left: 0;
+  }
+}
+
+.individualstatus {
+  box-shadow: 0.7rem 0.7rem 0.7rem rgba(0, 0, 0, 0.123);
+  width: 100%;
+  background: rgb(231, 231, 231);
+  padding: 1.8rem;
+  border-radius: 0.1rem;
+  height: 18rem;
+  margin-bottom: 2rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  @media screen and (max-width: $break-medium) {
+    max-width: 95vw;
+    margin-left: 0;
+    transform: translateX(0);
+    box-shadow: -0.8rem 0.4rem 0.2rem rgba(0, 0, 0, 0);
+  }
+  @media screen and (max-width: $break-small) {
+    height: 18rem;
+    transform: translateX(0);
+    margin-left: 0;
+    max-width: 95vw;
+    min-width: 95vw;
+  }
+}
+
+.individualstatusname {
+  margin-left: 0.5rem;
+  white-space: nowrap;
+  @media screen and (max-width: $break-small) {
+    font-size: 2.4rem;
+  }
+}
+
+.individualstatuscreatedat {
+  margin-left: 1rem;
+  margin-top: 0.35rem;
+  font-size: 1.1rem;
+  @media screen and (max-width: $break-small) {
+    font-size: 1.1rem;
+    width: 5rem;
+    line-height: 1.1rem;
+    margin-top: 0.8rem;
+  }
+}
+
+.individualstatuscontent {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  overflow: scroll;
+  min-height: 6rem;
+  max-height: 6rem;
+  width: 90%;
+  font-size: 1.8rem;
+  @media screen and (max-width: $break-small) {
+    font-size: 2.2rem;
+  }
+}
+
+.individualstatuslikesdislikescounter {
+  font-size: 1.2rem;
+  height: 3rem !important;
+  @media screen and (max-width: $break-small) {
+    font-size: 1.4rem;
+  }
+}
+
+.userprofilestatusdeleteopen {
+  position: absolute;
+  right: 0.2rem;
+  top: -2.3rem;
+  transition: color 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: rgb(255, 82, 82);
+  }
+  @media screen and (max-width: $break-medium) {
+    top: -2rem;
+    right: 2rem;
+    transform: scale(1.2);
+  }
+  @media screen and (max-width: $break-small) {
+    top: -3.3rem;
+    transform: scale(1);
+  }
+}
+
+.fa-trash-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  @media screen and(max-width: $break-small) {
+    display: none;
+  }
+}
+
+
+.userprofilestatusdeleteoptions {
+  position: absolute;
+  top: 1.8rem;
+  right: -1.6rem;
+  background: rgb(240, 240, 240);
+  padding: 1.4rem 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 1rem 0.8rem 3rem rgba(0, 0, 0, 0.349);
+  display: flex;
+}
+
+.userprofilestatusdeleteconfirm,
+.userprofilestatusdeletecancel {
+  background: rgb(223, 223, 223);
+  width: 8rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  transition: color 0.2s, background-color 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: rgb(255, 82, 82);
+    background: rgb(235, 235, 235);
+  }
+  &:active {
+    background: rgb(119, 119, 119);
+    color: rgb(238, 238, 238);
+  }
+}
+
+.userprofilestatusdeletebuttoncontainer {
+  position: relative;
+}
