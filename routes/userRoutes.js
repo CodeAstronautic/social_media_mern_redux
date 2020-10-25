@@ -36,7 +36,7 @@ conn.once('open', () => {
 });
 // create storage engine
 const storage = new GridFsStorage({
-  url: "mongodb+srv://invoiceSystem:7UkeK3JGGRRCFe7o@pm.1tahh.mongodb.net/Mkdemo?retryWrites=true&w=majority",
+  url: "***************",
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
