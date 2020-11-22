@@ -86,7 +86,7 @@ function Login({
   };
 
   const conditionalRenderComponentOrRedirect = isLoggedIn ? (
-    <Redirect to='/' />
+    <Redirect to='/feed' />
   ) : (
     <>
       <NavBar />

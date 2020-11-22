@@ -14,14 +14,8 @@ $break-small: 414px;
   @media screen and (min-width: $break-medium) {
     padding-top: 0.3rem;
     display: flex;
-    background: rgb(39, 140, 255);
-    background: linear-gradient(
-      180deg,
-      rgba(39, 140, 255, 1) 0%,
-      rgba(10, 125, 255, 1) 35%,
-      rgba(10, 125, 255, 1) 48%,
-      rgba(31, 107, 242, 1) 100%
-    );
+    background: rgb(18, 61, 110);
+    background: black;
     color: white;
     height: 4.7rem;
     margin-bottom: 0;
