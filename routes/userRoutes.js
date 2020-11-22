@@ -27,7 +27,11 @@ const Grid = require('gridfs-stream');
 ///////////// IMAGE STUFF
 router.use(methodOverride('_method'));
 
+<<<<<<< HEAD
 const conn = mongoose.createConnection("mongodb+srv://invoiceSystem:RDvpIqwT4wAjqlMa@pm.1tahh.mongodb.net/DenoFinal?retryWrites=true&w=majority");
+=======
+const conn = mongoose.createConnection("**");
+>>>>>>> e457dfb050e3a0af365cfd070b3274102340bdb4
 // Init gfs
 let gfs;
 conn.once('open', () => {
@@ -36,7 +40,11 @@ conn.once('open', () => {
 });
 // create storage engine
 const storage = new GridFsStorage({
+<<<<<<< HEAD
   url: "mongodb+srv://invoiceSystem:RDvpIqwT4wAjqlMa@pm.1tahh.mongodb.net/DenoFinal?retryWrites=true&w=majority",
+=======
+  url: "***************",
+>>>>>>> e457dfb050e3a0af365cfd070b3274102340bdb4
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
@@ -128,7 +136,7 @@ router.post('/register', async (req, res) => {
      secure: false,
      auth: {
        user: 'pm.globaliasoft@gmail.com' ,
-       pass: "globaliapooja"
+       pass: "*****"
      } ,
      tls : {
        rejectUnauthorized: false
