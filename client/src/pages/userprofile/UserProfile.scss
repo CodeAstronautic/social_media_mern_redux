@@ -48,7 +48,7 @@ $break-xs: 414px;
 }
 
 html {
-  background-color: black;
+  background-color: white;
 }
 
 .profilepagename {
@@ -128,8 +128,8 @@ html {
   background: rgba(122, 48, 48, 0.197);
   backdrop-filter: blur(0.2rem);
   position: absolute;
-  bottom: 0rem;
-  left: 4.5rem;
+  bottom: -5rem;
+  left: 10.5rem;
   width: 10rem;
   padding: 1rem;
   border-radius: 1rem;
