@@ -27,7 +27,7 @@ const Grid = require('gridfs-stream');
 ///////////// IMAGE STUFF
 router.use(methodOverride('_method'));
 
-const conn = mongoose.createConnection("mongodb+srv://invoiceSystem:7UkeK3JGGRRCFe7o@pm.1tahh.mongodb.net/Mkdemo?retryWrites=true&w=majority");
+const conn = mongoose.createConnection("mongodb+srv://invoiceSystem:RDvpIqwT4wAjqlMa@pm.1tahh.mongodb.net/DenoFinal?retryWrites=true&w=majority");
 // Init gfs
 let gfs;
 conn.once('open', () => {
@@ -36,7 +36,7 @@ conn.once('open', () => {
 });
 // create storage engine
 const storage = new GridFsStorage({
-  url: "mongodb+srv://invoiceSystem:7UkeK3JGGRRCFe7o@pm.1tahh.mongodb.net/Mkdemo?retryWrites=true&w=majority",
+  url: "mongodb+srv://invoiceSystem:RDvpIqwT4wAjqlMa@pm.1tahh.mongodb.net/DenoFinal?retryWrites=true&w=majority",
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {

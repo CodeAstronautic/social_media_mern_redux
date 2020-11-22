@@ -92,7 +92,7 @@ const UserProfile = ({
               src={
                 profileUser.coverPicId
                   ? `/user/image/${profileUser.coverPicId}`
-                  : 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/healthiest-dog-breeds-1569423729.jpg?crop=0.548xw:0.822xh;0.115xw,0.0577xh'
+                  : ''
               }
               alt='profile cover'
               onLoad={() => setCoverPhotoLoading(false)}
