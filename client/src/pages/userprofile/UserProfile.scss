@@ -52,10 +52,10 @@ html {
 }
 
 .profilepagename {
-  color: white;
+  color: black;
   position: absolute;
-  top: 30rem;
-  margin-left: 26rem;
+  top: 35rem;
+  margin-left: 30rem;
   z-index: 1;
   font-size: 3.4rem;
   font-weight: bold;
@@ -136,7 +136,7 @@ html {
   text-align: center;
   transition: box-shadow 0.3s, color 0.3s, transform 0.3s, background 0.3s;
   &:hover {
-    color: white;
+    color: black;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.171);
     transform: translateY(-0.2rem);
     background: rgba(170, 194, 231, 0.308);
