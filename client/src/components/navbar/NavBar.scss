@@ -235,14 +235,8 @@ $break-small: 414px;
 }
 
 .smallnavbarcontainer {
-  background: rgb(35, 126, 230);
-  background: linear-gradient(
-    180deg,
-    rgba(39, 140, 255, 1) 0%,
-    rgba(10, 125, 255, 1) 35%,
-    rgba(10, 125, 255, 1) 48%,
-    rgba(31, 107, 242, 1) 100%
-  );
+  background: rgb(0, 0, 0);
+  background: black;
   font-size: 2.1rem;
   position: fixed;
   z-index: 6;

@@ -29,8 +29,14 @@ function Login({
     // let { token } = useParams();
     let url = window.location.pathname;
     let token = url.split('/')[2];
-    if(token) {
-      Axios.post('http://localhost:3001/verify', {token: token}).then(res => console.log(res)).catch(err => console.log(err));
+    if (token) {
+      Axios.post('http://localhost:3001/verify', {
+        token: token
+      }).then(res =>
+        console.log(res))
+        .catch(err =>
+          console.log(err)
+        );
     }
     setTimeout(() => {
       setErrorMessage('');
@@ -88,40 +94,40 @@ function Login({
   const conditionalRenderComponentOrRedirect = isLoggedIn ? (
     <Redirect to='/feed' />
   ) : (
-    <>
-      <NavBar />
-      <form className='loginform' onSubmit={handleSubmit}>
-        <div className='loginforminsidecontainer'>
-          <h1 className='titletext'>log in</h1>
-          {userName && <h1>name: {userName}</h1>}
-          <div className='formborder'>
-            <input
-              placeholder='Email'
-              name='email'
-              type='text'
-              className='loginforminput'
-              value={emailValue}
-              onChange={handleChange}
-            />
+      <>
+        <NavBar />
+        <form className='loginform' onSubmit={handleSubmit}>
+          <div className='loginforminsidecontainer'>
+            <h1 className='titletext'>log in</h1>
+            {userName && <h1>name: {userName}</h1>}
+            <div className='formborder'>
+              <input
+                placeholder='Email'
+                name='email'
+                type='text'
+                className='loginforminput'
+                value={emailValue}
+                onChange={handleChange}
+              />
 
-            <input
-              placeholder='Password'
-              name='password'
-              type='password'
-              className='loginforminput'
-              value={passwordValue}
-              onChange={handleChange}
-            />
-           
-            {errorMessage && (
-              <h6 style={{ color: 'red', float: 'right' }}>{errorMessage}</h6>
-            )}
-            <input type='submit' className='loginbutton' value='log in' />
+              <input
+                placeholder='Password'
+                name='password'
+                type='password'
+                className='loginforminput'
+                value={passwordValue}
+                onChange={handleChange}
+              />
+
+              {errorMessage && (
+                <h6 style={{ color: 'red', float: 'right' }}>{errorMessage}</h6>
+              )}
+              <input type='submit' className='loginbutton' value='log in' />
+            </div>
           </div>
-        </div>
-      </form>
-    </>
-  );
+        </form>
+      </>
+    );
 
   return conditionalRenderComponentOrRedirect;
 }
