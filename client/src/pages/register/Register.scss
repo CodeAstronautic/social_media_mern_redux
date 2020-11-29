@@ -4,7 +4,7 @@ $break-small: 414px;
 .registerform {
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: whitesmoke;
 }
 
 .registerforminsidecontainer {
@@ -12,9 +12,9 @@ $break-small: 414px;
   padding: 2rem 4rem 0 4rem;
   min-width: 40rem;
   max-width: 60rem;
-  border-radius: 1rem;
-  background: rgb(255, 255, 255);
-  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.212),
+  border-radius: 10rem;
+  background: white;
+  box-shadow: 1.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.212),
     -0.2rem -0.2rem 0.2rem rgba(255, 255, 255, 0.212);
   @media screen and (max-width: $break-medium) {
     padding: 2rem 2rem 0 2rem;
@@ -31,6 +31,7 @@ $break-small: 414px;
 .registerforminput {
   min-width: 50rem;
   max-width: 50rem;
+  border-radius: 50px;
   margin: 1rem auto;
   display: block;
   padding: 0.5rem;

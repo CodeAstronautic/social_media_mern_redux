@@ -14,10 +14,11 @@ $break-small: 414px;
   @media screen and (min-width: $break-medium) {
     padding-top: 0.3rem;
     display: flex;
+    font-size:25px;
     background: rgb(18, 61, 110);
     background: black;
     color: white;
-    height: 4.7rem;
+    height: 6.7rem;
     margin-bottom: 0;
     box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
     a:hover {

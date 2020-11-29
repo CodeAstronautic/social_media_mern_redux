@@ -82,81 +82,85 @@ export default function Register() {
   const conditionalRenderComponentOrRedirect = formSubmitSuccess ? (
     <Redirect to='/login' />
   ) : (
-    <>
-      <NavBar />
-      <form className='registerform' onSubmit={handleSubmit}>
-        <div className='registerforminsidecontainer'>
-          <label type='text' name='name'>
-            <input
-              placeholder='Name'
-              name='name'
-              type='text'
-              className='registerforminput'
-              value={nameValue}
-              onChange={handleChange}
-              maxLength={15}
-            />
-          </label>
-          <label type='text' name='email'>
-            <input
-              placeholder='Email'
-              name='email'
-              type='email'
-              className='registerforminput'
-              value={emailValue}
-              onChange={handleChange}
-            />
-          </label>
+      <>
+        <NavBar />
+        <form className='registerform' onSubmit={handleSubmit}>
+          <div className='registerforminsidecontainer'>
+            <center>
 
-          <label type='text' name='age'>
-            <input
-              placeholder='Age'
-              name='age'
-              type='number'
-              className='registerforminput'
-              value={ageValue}
-              onChange={handleChange}
-            />
-          </label>
-          <label type='text' name='city'>
-            <input
-              placeholder='City'
-              name='city'
-              type='text'
-              className='registerforminput'
-              value={cityValue}
-              onChange={handleChange}
-              maxLength={15}
-            />
-          </label>
+            <strong> <h1>Register</h1></strong> 
+            </center>
+            <label type='text' name='name'>
+              <input
+                placeholder='Name'
+                name='name'
+                type='text'
+                className='registerforminput'
+                value={nameValue}
+                onChange={handleChange}
+                maxLength={15}
+              />
+            </label>
+            <label type='text' name='email'>
+              <input
+                placeholder='Email'
+                name='email'
+                type='email'
+                className='registerforminput'
+                value={emailValue}
+                onChange={handleChange}
+              />
+            </label>
 
-          <label type='password' name='password'>
-            <input
-              placeholder='Password'
-              name='password'
-              type='password'
-              className='registerforminput'
-              value={passwordValue}
-              onChange={handleChange}
-            />
-          </label>
-          <label type='password' name='confirmPassword'>
-            <input
-              placeholder='Confirm password'
-              name='confirmPassword'
-              type='password'
-              className='registerforminput'
-              value={confirmPasswordValue}
-              onChange={handleChange}
-            />
-          </label>
-          {errorMessage && <h6 style={{ color: 'red' }}>{errorMessage}</h6>}
-          <input type='submit' className='registerbutton' value='Register' />
-        </div>
-        <div style={{ height: '10rem' }} />
-      </form>
-    </>
-  );
+            <label type='text' name='age'>
+              <input
+                placeholder='Age'
+                name='age'
+                type='number'
+                className='registerforminput'
+                value={ageValue}
+                onChange={handleChange}
+              />
+            </label>
+            <label type='text' name='city'>
+              <input
+                placeholder='City'
+                name='city'
+                type='text'
+                className='registerforminput'
+                value={cityValue}
+                onChange={handleChange}
+                maxLength={15}
+              />
+            </label>
+
+            <label type='password' name='password'>
+              <input
+                placeholder='Password'
+                name='password'
+                type='password'
+                className='registerforminput'
+                value={passwordValue}
+                onChange={handleChange}
+              />
+            </label>
+            <label type='password' name='confirmPassword'>
+              <input
+                placeholder='Confirm password'
+                name='confirmPassword'
+                type='password'
+                className='registerforminput'
+                value={confirmPasswordValue}
+                onChange={handleChange}
+              />
+            </label>
+            {errorMessage && <h6 style={{ color: 'red' }}>{errorMessage}</h6>}
+            <input type='submit' className='registerbutton' value='Register' />
+          </div>
+          <div style={{ height: '10rem' }} />
+        </form>
+      </>
+    );
 
   return conditionalRenderComponentOrRedirect;
 }
