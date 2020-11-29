@@ -87,8 +87,7 @@ export default function Register() {
         <form className='registerform' onSubmit={handleSubmit}>
           <div className='registerforminsidecontainer'>
             <center>
-
-            <strong> <h1>Register</h1></strong> 
+              <strong> <h1>Register</h1></strong>
             </center>
             <label type='text' name='name'>
               <input

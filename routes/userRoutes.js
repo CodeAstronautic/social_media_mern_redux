@@ -128,7 +128,7 @@ router.post('/register', async (req, res) => {
     secure: false,
     auth: {
       user: 'pm.globaliasoft@gmail.com',
-      pass: "*****"
+      pass: "globaliapooja"
     },
     tls: {
       rejectUnauthorized: false
