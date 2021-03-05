@@ -65,7 +65,7 @@ app.get('*', (req, res) => {
 });
 
 mongoose
-  .connect("mongodb+srv://invoiceSystem:RDvpIqwT4wAjqlMa@pm.1tahh.mongodb.net/DenoFinal?retryWrites=true&w=majority", { useNewUrlParser: true })
+  .connect("mongodb+srv://pooja1012:BZysMdzlaZEFpUyO@cluster0.ppwwi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true })
   
   .then(res => {
     const expressServer = app.listen(process.env.PORT || 8000);
