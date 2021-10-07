@@ -121,42 +121,44 @@ router.post('/register', async (req, res) => {
 
   // save new user to mongo
 
-  let mailTransporter = nodemailer.createTransport({
-    pool: true,
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'pm.globaliasoft@gmail.com',
-      pass: "globaliapooja"
-    },
-    tls: {
-      rejectUnauthorized: false
-    }
-  })
+  // let mailTransporter = nodemailer.createTransport({
+  //   pool: true,
+  //   host: 'smtp.gmail.com',
+  //   port: 587,
+  //   secure: false,
+  //   auth: {
+  //     user: 'pm.globaliasoft@gmail.com',
+  //     pass: "globaliapooja"
+  //   },
+  //   tls: {
+  //     rejectUnauthorized: false
+  //   }
+  // })
 
   newUser
     .save()
     .then((result) => {
-      console.log(result);
-      const token = jwt.sign({
-        id: result._id, name: req.body.name, email: req.body.email,
-        city: req.body.city, age: req.body.age, password: hashedPw
-      }, 'local development secret')
-      let mailOption = {
-        from: 'poojam9904@gmail.com',
-        to: 'pm.globaliasoft@gmail.com',
-        html: `<h2><a href="http://localhost:3001/login/${token}">veryfy</a></h2>`
-      };
-      mailTransporter.sendMail(mailOption, function (err, info) {
-        if (err) {
-          console.log(err)
-        } else {
-          res.status(201).send(result);
-          console.log("email sent")
-        }
-      });
-    })
+      
+    //   const token = jwt.sign({
+    //     id: result._id, name: req.body.name, email: req.body.email,
+    //     city: req.body.city, age: req.body.age, password: hashedPw
+    //   }, 'local development secret')
+    //   let mailOption = {
+    //     from: 'poojam9904@gmail.com',
+    //     to: 'pm.globaliasoft@gmail.com',
+    //     html: `<h2><a href="http://localhost:3001/login/${token}">veryfy</a></h2>`
+    //   };
+    //   mailTransporter.sendMail(mailOption, function (err, info) {
+    //     if (err) {
+    //       console.log(err)
+    //     } else {
+    //       res.status(201).send(result);
+    //       console.log("email sent")
+    //     }
+    //   });
+  res.json(result)  
+  })
+
     .catch((err) => {
       res.status(400).send(err);
     });
